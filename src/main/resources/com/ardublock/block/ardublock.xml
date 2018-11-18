@@ -11068,13 +11068,13 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-	<!-- PLAQUINO CansatBoard Blocks for PQ Cansat seminor @2018/12/16 -->
+	<!-- PLAQUINO Linetracer Blocks for PQ Cansat seminor @2018/12/16 -->
 		<BlockGenus name="PQ_motor_set" kind="command" color="120 20 50" initlabel="bg.PQ_motor_set">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="left">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PQ_motor_set_left">
 					<DefaultArg genus-name="number" label="100"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="right">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PQ_motor_set_right">
 					<DefaultArg genus-name="number" label="100"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -11105,6 +11105,50 @@
 			<description>
 				<text> value of center IR sensor</text>
 			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="PQ_LED" kind="command" color="120 20 50" initlabel="bg.PQ_LED">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PQ_LED_ID">
+					<DefaultArg genus-name="PQ_LED_red" label="red"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PQ_LED_ONOFF">
+					<DefaultArg genus-name="PQ_LED_ON" label="ON"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<description>
+				<text>rotate PQuino motors</text>
+			</description>
+		</BlockGenus>
+
+		<BlockGenus name="PQ_LED_red" kind="data" color="220 70 50" initlabel="bg.PQ_LED_red">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="PQ_LED_green" kind="data" color="220 70 50" initlabel="bg.PQ_LED_green">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="PQ_LED_blue" kind="data" color="220 70 50" initlabel="bg.PQ_LED_blue">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="PQ_LED_ON" kind="data" color="220 70 50" initlabel="bg.PQ_LED_ON">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="PQ_LED_OFF" kind="data" color="220 70 50" initlabel="bg.PQ_LED_OFF">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
@@ -11761,6 +11805,22 @@
 			<FamilyMember>Midi_B</FamilyMember>
 		</BlockFamily>
 
+		<!-- PLAQuino BlockFamilies-->
+		<BlockFamily>
+			<FamilyMember>PQ_LED_ON</FamilyMember>
+			<FamilyMember>PQ_LED_OFF</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>PQ_LED_red</FamilyMember>
+			<FamilyMember>PQ_LED_green</FamilyMember>
+			<FamilyMember>PQ_LED_blue</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>PQ_IR_right</FamilyMember>
+			<FamilyMember>PQ_IR_center</FamilyMember>
+			<FamilyMember>PQ_IR_left</FamilyMember>
+		</BlockFamily>
+
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -12331,6 +12391,14 @@
 				<BlockGenusMember>PQ_IR_left</BlockGenusMember>
 				<BlockGenusMember>PQ_IR_center</BlockGenusMember>
 				<BlockGenusMember>PQ_IR_right</BlockGenusMember>
+				<BlockGenusMember>PQ_LED</BlockGenusMember>
+				<BlockGenusMember>PQ_LED_red</BlockGenusMember>
+				<BlockGenusMember>PQ_LED_ON</BlockGenusMember>
+				<!--
+				<BlockGenusMember>PQ_LED_green</BlockGenusMember>
+				<BlockGenusMember>PQ_LED_blue</BlockGenusMember>
+				<BlockGenusMember>PQ_LED_OFF</BlockGenusMember>
+				-->
 			</BlockDrawer>
 
 			<!--
