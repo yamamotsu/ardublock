@@ -9,7 +9,7 @@ import com.ardublock.translator.block.TranslatorBlock;
 public class PQIRCenterBlock extends TranslatorBlock
 {
 
-	/* コンストラクタ: 引数と基底クラスコンストラクタの呼び出しはテンプレパターン*/
+	/* コンストラクタ: 引数と基底クラスコンストラクタの呼び出しはテンプレパターン　*/
 	public PQIRCenterBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

@@ -18,8 +18,8 @@ public class PQIRRightBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
         // setup()内に書いておく処理
-		translator.addSetupCommand("pinMode(A6, INPUT);");
+		translator.addSetupCommand("pinMode(A5, INPUT);");
 
-        return codePrefix + "analogRead(A6)" + codeSuffix;
+        return codePrefix + "analogRead(A5)" + codeSuffix;
 	}
 }
